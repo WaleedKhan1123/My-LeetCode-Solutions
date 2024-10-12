@@ -13,17 +13,13 @@ class Solution(object):
             merge += b
 
         if len(word1) >len(word2): 
-           a = len(word1)
-           b = len(word2)
-           c = a-b
-           g = word1[-c:]
-           merge+= g
+           c = len(word1) - len(word2)
+           remaining = word1[-c:]
+           merge += remaining
         elif len(word2) >len(word1):
-            a = len(word2)
-            b = len(word1)
-            c = a-b
-            g = word2[-c:]
-            merge+= g
+            c = len(word2) - len(word1)
+            remaining = word2[-c:]
+            merge += remaining
 
         return merge 
     
@@ -34,3 +30,6 @@ if __name__ == "__main__":
     merge = sol.mergeAlternately("Waleed","khan")
     
     print(merge)
+    
+    
+    
