@@ -12,7 +12,7 @@ class Solution(object):
         for char in count_s:
             substring+=char
             
-        substring2 = "sss"
+        substring2 = ""
         while len(substring2)<len(s):
             
             substring2+=substring
