@@ -8,7 +8,8 @@ class Solution(object):
         count_s = Counter(s)
         
         substring = ""
-        
+        if(len(s)<=1):
+            return False
         for char in count_s:
             substring+=char
             
@@ -16,6 +17,7 @@ class Solution(object):
         while len(substring2)<len(s):
             
             substring2+=substring
+        print(substring2)
         if substring2 == s:
             return True
         return False
@@ -23,6 +25,6 @@ class Solution(object):
         
 if __name__ == "__main__":
     sol = Solution()
-    result = sol.repeatedSubstringPattern("abcabcabcabc")
+    result = sol.repeatedSubstringPattern("abcabcabc")
     print(result)
             
