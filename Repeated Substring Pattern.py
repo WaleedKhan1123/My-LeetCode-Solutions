@@ -1,4 +1,3 @@
-from collections import Counter
 class Solution(object):
     def repeatedSubstringPattern(self, s):
         """
@@ -8,11 +7,10 @@ class Solution(object):
         if len(s) <= 1:
             return False
         
-          # Try for every possible substring length
         for length in range(1, len(s) // 2 + 1):
-            if len(s) % length == 0:  # Check if length is a divisor of s
-                substring = s[:length]  # Get the substring
-                if substring * (len(s) // length) == s:  # Repeat the substring and compare
+            if len(s) % length == 0: 
+                substring = s[:length]  
+                if substring * (len(s) // length) == s: 
                     return True
         
         return False
