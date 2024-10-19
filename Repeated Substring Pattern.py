@@ -14,12 +14,10 @@ class Solution(object):
         for i in range(len(substring)):
             if substring2 == s:
                 return True
-            while len(substring2) < len(s):
-               substring2+=substring
-            
-        print(substring2)
-        if substring2 == s:
-            return True
+            while True:
+                 substring2+=substring[i]
+                 if substring2==s:
+                     break
         return False
         
         
