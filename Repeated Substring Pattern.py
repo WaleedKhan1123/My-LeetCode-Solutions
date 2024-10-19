@@ -25,6 +25,6 @@ class Solution(object):
         
 if __name__ == "__main__":
     sol = Solution()
-    result = sol.repeatedSubstringPattern("abcabcabc")
+    result = sol.repeatedSubstringPattern("abaababaab")
     print(result)
             
