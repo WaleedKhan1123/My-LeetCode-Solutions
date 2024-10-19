@@ -5,10 +5,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
+        if len(nums)==1:
+            return nums
         count=len(nums)
-        print(nums[count-2])
+        print(nums[-1:])
 if __name__ == "__main__":
     sol = Solution()
-    nums = [0,1,0,3,12]
+    nums = [0]
     result = sol.moveZeroes(nums)
+    print(result)
     
