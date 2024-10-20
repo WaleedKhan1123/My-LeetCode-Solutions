@@ -26,7 +26,7 @@ class Solution(object):
         return nums
 if __name__ == "__main__":
     sol = Solution()
-    nums = [0,1,0,3,12]
+    nums = [0,0,1]
     result = sol.moveZeroes(nums)
     print(result)
     
