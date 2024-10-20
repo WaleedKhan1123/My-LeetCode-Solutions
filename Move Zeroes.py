@@ -13,18 +13,17 @@ class Solution(object):
         movecount = 0
         for i in range(len(nums)):
             if nums[i]==0  and movecount!=counter_0[0]:
+                b=0
                 for j in range(i+1,len(nums)):
-                        b=0
                         print(j)
+                        print(i+b)
                         nums[i+b],nums[j]=nums[j],nums[i+b]
                         print(f"nums in iteration {nums}")
                         b+=1
                 movecount+=1
             if(movecount==counter_0[0]):
                 break
-            # print(nums)
-        count=len(nums)
-        print(nums)
+        return nums
 if __name__ == "__main__":
     sol = Solution()
     nums = [0,1,0,3,12]
