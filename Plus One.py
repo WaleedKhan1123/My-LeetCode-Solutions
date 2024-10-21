@@ -9,12 +9,10 @@ class Solution(object):
             num+=str(i)
         num = int(num)
         num+=1
-        for i in range(digits):
-            digits[i]
-        
+        digits = [int(digit) for digit in str(num)]
         return digits
 if __name__ == "__main__":
     sol = Solution()
-    digits = [1,2,3]
+    digits = [9,9,9]
     result = sol.plusOne(digits)
     print(result)        
