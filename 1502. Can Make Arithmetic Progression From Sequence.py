@@ -6,17 +6,22 @@ class Solution(object):
         """
         if len(arr)<=1:
             return False
+        if all(x==arr[0] for x in arr):
+            return True
         arr = sorted(arr)
+        print(arr)
         difference = arr[1]-arr[0]
-        print(difference)
-        for i in arr:
-            difference+=i
-            print(i)
-            if(difference not in arr):
+        if difference==0:
+            return False
+        check=0
+        for i in range(len(arr)-1):
+            check = arr[i]+difference
+            print(check)
+            if(check != arr[i+1]):
                 return False
         return True
 if __name__ == "__main__":
     sol = Solution()
-    arr = [0,1,2]
+    arr = [1,10,10,10,19]
     result = sol.canMakeArithmeticProgression(arr)
     print(result)        
