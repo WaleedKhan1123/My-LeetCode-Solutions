@@ -9,7 +9,9 @@ class Solution(object):
             num+=str(i)
         num = int(num)
         num+=1
-        print(num)
+        for i in range(digits):
+            digits[i]
+        
         return digits
 if __name__ == "__main__":
     sol = Solution()
