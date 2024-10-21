@@ -7,8 +7,9 @@ class Solution(object):
         num=""
         for i in digits:
             num+=str(i)
-        print(num[1])
-        
+        num = int(num)
+        num+=1
+        print(num)
         return digits
 if __name__ == "__main__":
     sol = Solution()
