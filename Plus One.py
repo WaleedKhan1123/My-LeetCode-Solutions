@@ -13,6 +13,6 @@ class Solution(object):
         return digits
 if __name__ == "__main__":
     sol = Solution()
-    digits = [9,9,9]
+    digits = [1,2,3]
     result = sol.plusOne(digits)
     print(result)        
