@@ -7,18 +7,26 @@ class Solution(object):
         same = all(x==nums[0]for x in nums)
         if same:
             return False
+        incdec = any(num>nums[0] for num in nums[1:])
+        print(incdec)
         for i in range(len(nums)):
             if i != (len(nums)-1):
-                j=i+1
+              j=i+1
+              if incdec:
                 if nums[i]<=nums[j]:
                      continue
                 else:
+                    return False
+              else:
+                  if nums[i]>=nums[j]:
+                     continue
+                  else:
                     return False
         return True
 
 if __name__ == "__main__":
     sol = Solution()
-    nums = [0,0,0,0]
+    nums = [4,3,2,1]
     result = sol.isMonotonic(nums)
     print(result)
     
