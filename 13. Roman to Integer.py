@@ -13,8 +13,8 @@ class Solution(object):
                if s[i] == romans[j]:
                    numlist.append(numbers[j]) 
         num=0
-        for i in numlist:
-            num+=int(i)
+        for i in range(len(numlist)):
+            num+=int(numlist[i])
         return num
 if __name__ == "__main__":
     sol = Solution()
