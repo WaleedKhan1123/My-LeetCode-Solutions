@@ -4,7 +4,8 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        return s.lower()
+        lowerCase = s.lower()
+        return lowerCase
 if __name__ == "__main__":
     sol = Solution()
     s = "Hello"
