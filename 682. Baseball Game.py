@@ -7,6 +7,6 @@ class Solution(object):
         
 if __name__ == "__main__":
     sol = Solution()
-    s = "Hello"
-    result = sol.toLowerCase(s)
+    ops = "Hello"
+    result = sol.calPoints(ops)
     print(result)       
