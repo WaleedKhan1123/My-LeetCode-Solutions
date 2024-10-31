@@ -14,6 +14,8 @@ class Solution(object):
         print(numbers)
         print(signs)
         
+        
+        
 if __name__ == "__main__":
     sol = Solution()
     ops = ["5","2","C","D","+"]
