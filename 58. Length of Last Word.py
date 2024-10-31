@@ -3,7 +3,7 @@ class Solution(object):
     def lengthOfLastWord(self, s):
         """
         :type s: str
-        :rtype:s int
+        :rtype: int
         """
         elements = re.findall(r'\S+|\s+', s)
         words = [words for words in elements if words.strip()]
