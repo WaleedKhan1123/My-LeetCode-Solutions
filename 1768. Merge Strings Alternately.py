@@ -27,9 +27,9 @@ class Solution(object):
 if __name__ == "__main__":
     sol = Solution()
     
-    merge = sol.mergeAlternately("Waleed","khan")
+    result = sol.mergeAlternately("Waleed","khan")
     
-    print(merge)
+    print(result)
     
     
     
