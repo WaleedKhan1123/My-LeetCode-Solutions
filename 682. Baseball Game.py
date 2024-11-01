@@ -4,16 +4,24 @@ class Solution(object):
         :type operations: List[str]
         :rtype: int
         """
-        numbers=[]
-        signs = []
-        for i in operations:
+        result=[]
+        for value in operations:
             try:
-                numbers.append(int(i))
+                result.append(int(value))
             except:
-                signs.append(i)
-        print(numbers)
-        print(signs)
-        
+                
+                if value == "C":
+                  if(len(result)!=0):
+                    result.pop()
+                    
+                elif value =="D":
+                    result.append(result[-1]*2)
+                    
+                else:
+                    result.append(result[-1]+result[-2])
+                    
+        totalsum =  sum(result)
+        return totalsum
         
         
 if __name__ == "__main__":
