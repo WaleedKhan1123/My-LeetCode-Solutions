@@ -7,13 +7,13 @@ class Solution(object):
         
         Directions = {
             
-            "North":0,
-            "South":0,
+            "North":1,
             "West":0,
-            "East":0
+            "East":0,
+            "South":0
         }
         
-        
+        print(Directions)
 if __name__ == "__main__":
     sol = Solution()
     instructions = "GGLLGG"
