@@ -1,3 +1,4 @@
+import math 
 class Solution(object):
     def diagonalSum(self, mat):
         """
@@ -6,23 +7,40 @@ class Solution(object):
         """
         sum=0
         second_i=0
+        matrixlen = len(mat[0])
+        ceil = 0
+        if matrixlen ==1:
+            return mat[0][0]
+        if matrixlen %2 !=0:
+            ceil = math.ceil(matrixlen/2)-1
+        
         for i in range(len(mat[0])):
             sum+=mat[i][i]
-        print(sum)
-        for i in range(len(mat[0]) - 1, -1, -1):
-            print(i)
-            sum+=mat[second_i][i]
-            second_i+=1
-            print(second_i)
         
-        print(sum)
+        if ceil>0:
+            
+            for i in range(len(mat[0]) - 1, -1, -1):
+                
+                if ceil!=i:
+                    sum+=mat[second_i][i]
+                    
+                second_i+=1
+                
+        else:
+            for i in range(len(mat[0]) - 1, -1, -1):
+                
+
+                sum+=mat[second_i][i]
+                    
+                second_i+=1
+                
+        
+        return sum
         
 if __name__ == "__main__":
     sol = Solution()
     
-    mat = [[1,2,3],
-           [4,5,6],
-           [7,8,9]]
+    mat = [[5]]
     
     result = sol.diagonalSum(mat)
     
