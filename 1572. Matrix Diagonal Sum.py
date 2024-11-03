@@ -9,8 +9,10 @@ class Solution(object):
         second_i=0
         matrixlen = len(mat[0])
         ceil = 0
+        
         if matrixlen ==1:
             return mat[0][0]
+        
         if matrixlen %2 !=0:
             ceil = math.ceil(matrixlen/2)-1
         
@@ -40,7 +42,9 @@ class Solution(object):
 if __name__ == "__main__":
     sol = Solution()
     
-    mat = [[5]]
+    mat = [[1,3,5],
+           [6,2,3],
+           [9,12,3]]
     
     result = sol.diagonalSum(mat)
     
