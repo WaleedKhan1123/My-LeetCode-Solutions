@@ -59,6 +59,8 @@ class Solution(object):
             c +=1
             
         return False
+    
+
 if __name__ == "__main__":
     sol = Solution()
     instructions = "GG"
