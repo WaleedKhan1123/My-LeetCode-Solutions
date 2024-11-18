@@ -4,7 +4,7 @@ class Solution(object):
         :type moves: List[List[int]]
         :rtype: str
         """
-        
+
         a_moves = [moves[move] for move in range(0,len(moves),2)]
         b_moves = [moves[move] for move in range(1,len(moves),2)]
         win1= [[0,0],[1,1],[2,2]]
