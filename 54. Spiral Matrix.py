@@ -5,14 +5,43 @@ class Solution(object):
         :rtype: List[int]
         """
         
+         
         
-        newMatrix=[]
-        top = 0
-        bottom = len(matrix)
+        m  = len(matrix)
+        n  = len(matrix[0])
+        print(f"matrix is {m} x {n}")
+        newMatrix = []
+        traverse = 0
+        if m == 1:
+            return newMatrix+matrix[0]
+        x=0
+        for i in matrix:
+          x+=1
+          if traverse==0:
+               for j in i:
+                   newMatrix.append(j)
+               
+               traverse=1
+          elif traverse==1:
+              for k in range(m):
+                  print(f"k is {k}")
+                  newMatrix.append(matrix[k][n-1])
+              
+              m-= 1
+          if x == 2:
+           break
+       
+               
+          
+           
+            
         
+        
+        print(f"Spiral Matix is {newMatrix}")
+       
         
 if __name__ == "__main__":
     sol = Solution()
-    matrix = [[2,5,8],[4,0,-1]]
+    matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
     result = sol.spiralOrder(matrix)
     print(result)
