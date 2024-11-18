@@ -13,22 +13,32 @@ class Solution(object):
         newMatrix = []
         traverse = 0
         reverse = 0
+        countRows = 0
         if m == 1:
             return newMatrix+matrix[0]
         x=0
         for i in matrix:
           x+=1
+          
           if traverse==0 and reverse==0:
                for j in i:
                    newMatrix.append(j)
                
                traverse=1
+               countRows+=1
           elif traverse==1 and reverse ==0:
-              for k in range(1,m):
+              for k in range(countRows,m):
                   print(f"k is {k}")
                   newMatrix.append(matrix[k][n-1])
                   
               m-= 1
+              n-=1
+              reverse=1
+          elif traverse==0 and reverse ==1:
+              
+              
+          elif traverse==1 and reverse==1:
+              
               
           if x == 2:
            break
