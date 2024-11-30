@@ -5,6 +5,10 @@ class Solution(object):
         :type high: int
         :rtype: int
         """
+        oddcount=0 
+
+        for i in range(low,high):
+            print(i)
 
 if __name__ == "__main__":
     sol = Solution()
