@@ -15,6 +15,8 @@ class Solution(object):
                     column.append(c)
         print(row)
         print(column)
+        for i in range(len(row)):
+            
                 
         
 if __name__ == "__main__":
