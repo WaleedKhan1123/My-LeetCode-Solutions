@@ -18,10 +18,12 @@ class Solution(object):
         for i,j in zip(row,column):
             print(i)
             print(j)
-            # for r in range(len(matrix)):
-            #     matrix[r][i]=0
-            # for c in range(len(matrix[0])):
-            #         matrix[i][c] = 0
+            
+            for r in range(len(matrix)):
+                matrix[r][j]=0
+
+            for c in range(len(matrix[0])):
+                    matrix[i][c] = 0
 
             
             
