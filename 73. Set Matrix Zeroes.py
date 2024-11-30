@@ -5,13 +5,20 @@ class Solution(object):
         :type matrix: List[List[int]]
         :rtype: None Do not return anything, modify matrix in-place instead.
         """
-        for r in matrix:
+        row , column = [],[]
+        for r in range(len(matrix)):
             
-            for c in r:
-                print(c)
+            for c in range(len(matrix[r])):
+                 
+                 if matrix[r][c] == 0:
+                    row.append(r)
+                    column.append(c)
+        print(row)
+        print(column)
+                
         
 if __name__ == "__main__":
     sol = Solution()
     matrix = [[1,1,1],[1,0,1],[1,1,1]]
-    result = sol.setZeroes(matrix)
-    print(result)       
+    sol.setZeroes(matrix)
+    print(matrix)       
