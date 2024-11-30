@@ -18,7 +18,8 @@ class Solution(object):
         for i in row:
             for r in range(len(matrix)):
                 matrix[r][i]=0
-                # matrix[r][row[i]] = 0
+            for c in range(len(matrix[0])):
+                    matrix[i][c] = 0
 
             
             
