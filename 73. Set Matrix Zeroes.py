@@ -15,7 +15,12 @@ class Solution(object):
                     column.append(c)
         print(row)
         print(column)
-        for i in range(len(row)):
+        for i in row:
+            for r in range(len(matrix)):
+                matrix[r][i]=0
+                # matrix[r][row[i]] = 0
+
+            
             
                 
         
