@@ -1,4 +1,3 @@
-#not completed yet 
 class Solution(object):
     def setZeroes(self, matrix):
         """
@@ -13,12 +12,8 @@ class Solution(object):
                  if matrix[r][c] == 0:
                     row.append(r)
                     column.append(c)
-        print(row)
-        print(column)
         for i,j in zip(row,column):
-            print(i)
-            print(j)
-            
+
             for r in range(len(matrix)):
                 matrix[r][j]=0
 
