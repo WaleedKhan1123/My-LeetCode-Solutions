@@ -5,13 +5,10 @@ class Solution(object):
         :type high: int
         :rtype: int
         """
-        oddcount=0 
-
-        for i in range(low,high):
-            print(i)
-
+        
+        
 if __name__ == "__main__":
     sol = Solution()
-    low = 3, high = 7
+    low, high = 3 , 7
     result = sol.countOdds(low,high)
     print(result)
