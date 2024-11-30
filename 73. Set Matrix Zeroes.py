@@ -5,6 +5,10 @@ class Solution(object):
         :type matrix: List[List[int]]
         :rtype: None Do not return anything, modify matrix in-place instead.
         """
+        for r in matrix:
+            
+            for c in r:
+                print(c)
         
 if __name__ == "__main__":
     sol = Solution()
