@@ -15,11 +15,13 @@ class Solution(object):
                     column.append(c)
         print(row)
         print(column)
-        for i in row:
-            for r in range(len(matrix)):
-                matrix[r][i]=0
-            for c in range(len(matrix[0])):
-                    matrix[i][c] = 0
+        for i,j in zip(row,column):
+            print(i)
+            print(j)
+            # for r in range(len(matrix)):
+            #     matrix[r][i]=0
+            # for c in range(len(matrix[0])):
+            #         matrix[i][c] = 0
 
             
             
@@ -27,6 +29,6 @@ class Solution(object):
         
 if __name__ == "__main__":
     sol = Solution()
-    matrix = [[1,1,1],[1,0,1],[1,1,1]]
+    matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
     sol.setZeroes(matrix)
     print(matrix)       
