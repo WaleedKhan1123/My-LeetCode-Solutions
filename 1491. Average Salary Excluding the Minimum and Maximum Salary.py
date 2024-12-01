@@ -4,6 +4,7 @@ class Solution(object):
         :type salary: List[int]
         :rtype: float
         """
+
 if __name__ == "__main__":
     sol = Solution()
     
