@@ -4,12 +4,19 @@ class Solution(object):
         :type salary: List[int]
         :rtype: float
         """
-        sums=[]
-        for i in range(1,len(salary)-1):
-            sums.append(salary[i])
+        min ,max= -1,0
+        avg=[]
+        for i in salary:
+            if i <min:
+                min = i
+            elif i>max:
+                max=i
+            else:
+                avg.append(i)
 
-        return sum(sums)/len(sums)
-
+        print(avg)
+        return sum(avg)/len(avg)
+    
 if __name__ == "__main__":
     sol = Solution()
     
