@@ -4,6 +4,11 @@ class Solution(object):
         :type salary: List[int]
         :rtype: float
         """
+        sums=[]
+        for i in range(1,len(salary)-1):
+            sums.append(salary[i])
+
+        return sum(sums)/len(sums)
 
 if __name__ == "__main__":
     sol = Solution()
