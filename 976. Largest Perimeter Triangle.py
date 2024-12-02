@@ -5,18 +5,14 @@ class Solution(object):
         :rtype: int
         """
         a,b,c =0,0,0
-        sum = 0
         nums.sort(reverse =True)
-        for n in nums:
-            if n<=b:
-                a=n
-            elif n<=c:
-                b=n
-            else:
-                c=n
-        sum= a+b+c
-
-        return sum
+        if nums[0]>= nums[1] and nums[1]>=nums[2]:
+            c = nums[0]
+            b = nums[1]
+            a = nums[2]
+            return a+b+c
+        else:
+            return 0 
 
 if __name__ == "__main__":
 
