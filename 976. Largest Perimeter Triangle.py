@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     sol = Solution()
     
-    nums = [2,1,2]
+    nums = [1,2,1,10]
     result = sol.largestPerimeter(nums)
     
     print(result)
