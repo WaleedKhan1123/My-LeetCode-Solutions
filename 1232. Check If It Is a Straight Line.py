@@ -7,6 +7,7 @@ class Solution(object):
         distance_x = coordinates[1][0] - coordinates[0][0]
         distance_y = coordinates[1][1] - coordinates[0][1]
         for c in range(len(coordinates)-1):
+            
             if coordinates[c+1][0]-coordinates[c][0]==distance_x and coordinates[c+1][1]-coordinates[c][1]==distance_y:
                 continue
             else:
