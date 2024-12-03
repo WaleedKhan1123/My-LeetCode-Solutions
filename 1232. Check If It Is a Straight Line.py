@@ -13,13 +13,13 @@ class Solution(object):
 
         x.sort()       
         y.sort()
-
+        
         distance_x = x[1] - x[0]
         distance_y = y[1] - y[0]
 
         for c in range(len(coordinates)-1):
             
-            if x[c+1]-x[c]==distance_x and y[c+1]-y[c]==distance_y:
+            if x[c+1]-x[c] == distance_x and y[c+1]-y[c] == distance_y:
                 continue
             else:
                 return False
