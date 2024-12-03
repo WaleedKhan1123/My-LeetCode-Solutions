@@ -4,10 +4,10 @@ class Solution(object):
         :type coordinates: List[List[int]]
         :rtype: bool
         """
-        distance = coordinates[1][0] - coordinates[0][0]
-
+        distance_x = coordinates[1][0] - coordinates[0][0]
+        distance_y = coordinates[1][1] - coordinates[0][1]
         for c in range(len(coordinates)-1):
-            if coordinates[c+1][0]-coordinates[c][0]==distance:
+            if coordinates[c+1][0]-coordinates[c][0]==distance_x and coordinates[c+1][1]-coordinates[c][1]==distance_y:
                 continue
             else:
                 return False
@@ -17,7 +17,7 @@ class Solution(object):
         
 if __name__ == "__main__":
     sol = Solution()
-    coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
+    coordinates = [[1,2],[2,3],[3,5]]
     result = sol.checkStraightLine(coordinates) 
     
     print(result)
