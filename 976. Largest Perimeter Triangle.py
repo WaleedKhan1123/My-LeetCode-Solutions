@@ -4,13 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        a,b,c =0,0,0
         nums.sort(reverse =True)
-        if nums[0]>= nums[1] and nums[1]>=nums[2] and nums[1]+nums[2]>nums[0]:
-            c = nums[0]
-            b = nums[1]
-            a = nums[2]
-            return a+b+c
+        for i in range(len(nums) - 2):
+           
+            if nums[i] < nums[i + 1] + nums[i + 2]:
+              
+                return nums[i] + nums[i + 1] + nums[i + 2]
         else:
             return 0 
 
