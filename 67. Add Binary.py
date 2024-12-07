@@ -7,23 +7,26 @@ class Solution(object):
         """
         decimalsum = 0
         result = ""
+        i = 0
 
         for c in range(len(a)-1,-1,-1):
             
             
             if a[c] == '1':
-                power = 2**c
+                power = 2**i
                 decimalsum += power
+            i+=1
                 
-                
+        i = 0
+        
         for c in range(len(b)-1,-1,-1):
             
             
             if b[c] == '1':
-                power = 2**c
+                power = 2**i
                 decimalsum += power
-
-
+            i+=1
+        
         while decimalsum!=0:
              
             remainder = decimalsum%2
@@ -38,7 +41,7 @@ class Solution(object):
 
 if __name__ == "__main__":
     sol = Solution()
-    a = "11"
-    b = "1"
+    a = "1010"
+    b = "1011"
     result = sol.addBinary(a,b)
     print(result)
