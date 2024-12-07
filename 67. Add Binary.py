@@ -6,7 +6,17 @@ class Solution(object):
         :type b: str
         :rtype: str
         """
-       print(a)
+        decimalsum = 0
+
+        for c in range(len(a)-1,-1,-1):
+            
+            
+            if a[c] == 1:
+                power = 2**c
+                decimalsum = power
+        print(decimalsum)
+                
+
 
 if __name__ == "__main__":
     sol = Solution()
