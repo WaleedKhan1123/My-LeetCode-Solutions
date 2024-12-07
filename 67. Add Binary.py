@@ -13,7 +13,7 @@ class Solution(object):
             
             if a[c] == 1:
                 power = 2**c
-                decimalsum = power
+                decimalsum += power
         print(decimalsum)
                 
 
