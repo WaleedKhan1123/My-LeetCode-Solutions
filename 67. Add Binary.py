@@ -8,7 +8,7 @@ class Solution(object):
         """
         decimalsum = 0
         result = ""
-            
+
         for c in range(len(a)-1,-1,-1):
             
             
@@ -23,7 +23,14 @@ class Solution(object):
             if b[c] == '1':
                 power = 2**c
                 decimalsum += power
-        print(decimalsum)
+
+        
+        while decimalsum!=0:
+
+            print(decimalsum)
+
+
+        
 
 if __name__ == "__main__":
     sol = Solution()
