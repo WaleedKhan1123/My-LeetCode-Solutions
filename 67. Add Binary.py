@@ -23,11 +23,11 @@ class Solution(object):
             if b[c] == '1':
                 power = 2**c
                 decimalsum += power
-
-        
+        c=1
         while decimalsum!=0:
-
-            print(decimalsum)
+             
+            decimalsum=decimalsum-c
+                          
 
 
         
