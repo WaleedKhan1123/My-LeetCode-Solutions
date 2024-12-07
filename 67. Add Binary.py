@@ -35,7 +35,7 @@ class Solution(object):
 
             decimalsum = decimalsum//2
 
-        return result
+        return result or '0'
 
         
 
