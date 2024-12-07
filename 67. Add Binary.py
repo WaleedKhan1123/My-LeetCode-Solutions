@@ -23,13 +23,17 @@ class Solution(object):
             if b[c] == '1':
                 power = 2**c
                 decimalsum += power
-                
-        c=1
+
+
         while decimalsum!=0:
              
-            decimalsum=decimalsum-c
-                          
+            remainder = decimalsum%2
 
+            result = str(remainder) + result
+
+            decimalsum = decimalsum//2
+
+        return result
 
         
 
