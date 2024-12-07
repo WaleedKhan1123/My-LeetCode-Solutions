@@ -7,16 +7,23 @@ class Solution(object):
         :rtype: str
         """
         decimalsum = 0
-
+        result = ""
+            
         for c in range(len(a)-1,-1,-1):
             
             
-            if a[c] == 1:
+            if a[c] == '1':
+                power = 2**c
+                decimalsum += power
+                
+                
+        for c in range(len(b)-1,-1,-1):
+            
+            
+            if b[c] == '1':
                 power = 2**c
                 decimalsum += power
         print(decimalsum)
-                
-
 
 if __name__ == "__main__":
     sol = Solution()
