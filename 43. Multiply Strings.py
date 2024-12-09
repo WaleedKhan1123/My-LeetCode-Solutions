@@ -6,11 +6,11 @@ class Solution(object):
         :rtype: str
         """
         
-
-
+        print(num1,num2)
 
 if __name__ == "__main__":
     sol = Solution()
-    num1 = "2", num2 = "3"
+    num1 = "2"
+    num2 = "3"
     result = sol.multiply(num1,num2)
     print(result)
