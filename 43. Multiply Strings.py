@@ -1,3 +1,4 @@
+#not completed yet
 class Solution(object):
     def multiply(self, num1, num2):
         """
@@ -20,22 +21,19 @@ class Solution(object):
         
         numa = 0
         numb = 0
+        num3 =0
         c = 0
         for n in num1:
-            numa=num[f'n']
+            numa=num[f'{n}']
             if c!=0:
-                num_digits = len(str(num2))
+                num_digits = len(str(numa))
                 print(num_digits)  
                 num3=num1 * (10 ** num_digits) + num2
+            c+=1
+        print(num3)
 if __name__ == "__main__":
     sol = Solution()
-    num1 = 2
-    num2 = 3
-
-    num_digits = len(str(num2))
-    print(num_digits)  # Convert to string to count digits
-    # Multiply num1 by 10^num_digits and add num2
-    num3=num1 * (10 ** num_digits) + num2
-    print(num3)
-    # result = sol.multiply(num1,num2)
-    # print(result)
+    num1 = "2"
+    num2 = "3"
+    result = sol.multiply(num1,num2)
+    print(result)
