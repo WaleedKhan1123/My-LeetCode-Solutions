@@ -23,14 +23,29 @@ class Solution(object):
         numb = 0
         num3 =0
         c = 0
-        for n in num1:
-            numa=num[f'{n}']
-            if c!=0:
-                num_digits = len(str(numa))
-                print(num_digits)  
-                num3=num1 * (10 ** num_digits) + num2
-            c+=1
-        print(num3)
+        if len(num1)==1:
+            numa=num[f'{num1}']
+        else:
+
+            for n in num1:
+                numa=num[f'{n}']
+                if c!=0:
+                    num_digits = len(str(numa))
+                    print(num_digits)  
+                    num3=num1 * (10 ** num_digits) + num2
+                c+=1
+        if len(num2)==1:
+            numb=num[f'{num2}']
+        else:
+
+            for n in num1:
+                numa=num[f'{n}']
+                if c!=0:
+                    num_digits = len(str(numa))
+                    print(num_digits)  
+                    num3=num1 * (10 ** num_digits) + num2
+                c+=1
+        print(numa*numb)
 if __name__ == "__main__":
     sol = Solution()
     num1 = "2"
