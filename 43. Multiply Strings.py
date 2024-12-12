@@ -22,6 +22,7 @@ class Solution(object):
         numa = 0
         numb = 0
         num3 =0
+        result=0
         c = 0
         if len(num1)==1:
             numa=num[f'{num1}']
@@ -45,7 +46,11 @@ class Solution(object):
                     print(num_digits)  
                     num3=num1 * (10 ** num_digits) + num2
                 c+=1
-        print(numa*numb)
+        num3 = numa*numb
+
+        
+
+
 if __name__ == "__main__":
     sol = Solution()
     num1 = "2"
