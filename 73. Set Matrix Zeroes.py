@@ -19,10 +19,6 @@ class Solution(object):
 
             for c in range(len(matrix[0])):
                     matrix[i][c] = 0
-
-            
-            
-                
         
 if __name__ == "__main__":
     sol = Solution()
