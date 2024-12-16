@@ -6,6 +6,7 @@ class Solution(object):
         """
         lowerCase = s.lower()
         return lowerCase
+        
 if __name__ == "__main__":
     sol = Solution()
     s = "Hello"
