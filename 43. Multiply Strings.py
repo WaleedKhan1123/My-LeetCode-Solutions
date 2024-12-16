@@ -31,14 +31,6 @@ class Solution(object):
             '9':'9'
         }
         numx=[]
-        numa=0
-        numb=0
-        for n in num1:
-            numx.append(num[n])
-
-        for n in num2:
-            numx.append(num[n])
-        c=0
         num_digits = 1
         num3=0
         num4=0
@@ -54,8 +46,14 @@ class Solution(object):
               num4 = num[num2[n]] * (10 ** num_digits) + num[num2[n+1]] 
              else:
                 num4 = num4 * (10 ** num_digits) + num[num2[n+1]]          
-        result = num3*num4       
-        print(result) 
+        result = num3*num4  
+        print(result)
+        while result>0:
+            digit = result%10
+            numx.append(digit)
+            result//=10
+        numx.reverse()
+        print(numx) 
 
         
 
