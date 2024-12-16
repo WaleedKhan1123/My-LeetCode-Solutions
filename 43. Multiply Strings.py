@@ -19,12 +19,6 @@ class Solution(object):
             '9':9
         }
         numx=[]
-        numa = 0
-        numb = 0
-        num3 = 0
-        num4 = 0
-        result=0
-        c = 0
         for n in num1:
             numx.append(num[n])
 
