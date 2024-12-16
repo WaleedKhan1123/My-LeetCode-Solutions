@@ -53,7 +53,10 @@ class Solution(object):
             numx.append(digit)
             result//=10
         numx.reverse()
-        print(numx) 
+        resultString = ""
+        for n in numx:
+           resultString+=nums[n]
+        print(resultString) 
 
         
 
