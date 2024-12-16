@@ -19,9 +19,20 @@ class Solution(object):
             '9':9
         }
         numx=[]
+        numa=0
+        numb=0
         for n in num1:
             numx.append(num[n])
 
+        for n in num2:
+            numx.append(num[n])
+        c=0
+        def concatenate_integers(num1, num2):
+            
+            num_digits = len(str(num2))  
+            return num1 * (10 ** num_digits) + num2 
+        
+                  
         print(numx)        
 
         
