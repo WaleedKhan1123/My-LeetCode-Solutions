@@ -27,20 +27,24 @@ class Solution(object):
         for n in num2:
             numx.append(num[n])
         c=0
-        def concatenate_integers(num1, num2):
-            
-            num_digits = len(str(num2))  
-            return num1 * (10 ** num_digits) + num2 
+        num_digits = 1
+        num3=0
         
+            
+        for n in range(len(num1)-1):
+             if n ==0:
+              num3 = num[num1[n]] * (10 ** num_digits) + num[num1[n+1]] 
+             else:
+                num3 = num3 * (10 ** num_digits) + num[num1[n+1]]
                   
-        print(numx)        
+        print(num3)        
 
         
 
 
 if __name__ == "__main__":
     sol = Solution()
-    num1 = "2"
+    num1 = "233"
     num2 = "3"
     result = sol.multiply(num1,num2)
     print(result)
