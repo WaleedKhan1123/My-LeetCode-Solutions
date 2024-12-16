@@ -18,44 +18,24 @@ class Solution(object):
             '8':8,
             '9':9
         }
-        
+        numx=[]
         numa = 0
         numb = 0
         num3 = 0
         num4 = 0
         result=0
         c = 0
-        if len(num1)==1:
-            numa=num[f'{num1}']
-        else:
-            num_digits = len(str(num1))-1
-            for n in range(len(num1)-1):
-                numa=num[f'{num1[n]}']
-                numb = num[f'{num1[n+1]}']
-                    
-                
-                num3=numa * (10 ** num_digits) + numb
-                print(num3)
-                
-        if len(num2)==1:
-            numb=num[f'{num2}']
-        else:
+        for n in num1:
+            numx.append(num[n])
 
-            for n in num1:
-                numa=num[f'{n}']
-                if c!=0:
-                    num_digits = len(str(numa))
-                    print(num_digits)  
-                    num3=num1 * (10 ** num_digits) + num2
-                c+=1
-      
+        print(numx)        
 
         
 
 
 if __name__ == "__main__":
     sol = Solution()
-    num1 = "233"
+    num1 = "2"
     num2 = "3"
     result = sol.multiply(num1,num2)
     print(result)
