@@ -1,4 +1,3 @@
-#not completed yet
 class Solution(object):
     def multiply(self, num1, num2):
         """
@@ -67,8 +66,6 @@ class Solution(object):
             for n in numx:
              resultString+=nums[f'{n}']
             return resultString 
-
-        
 
 
 if __name__ == "__main__":
