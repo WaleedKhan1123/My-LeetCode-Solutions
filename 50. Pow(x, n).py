@@ -6,11 +6,11 @@ class Solution(object):
         :rtype: float
         """
 
-        result = x**n
-        print(result)
+        return x**n
+        
 if __name__ == "__main__":
     sol = Solution()
     x = 2.00000
-    n = 10
+    n = -2
     result = sol.myPow(x,n)
     print(result)
