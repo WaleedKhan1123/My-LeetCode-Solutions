@@ -5,6 +5,9 @@ class Solution(object):
         :type n: int
         :rtype: float
         """
+
+        result = x**n
+        print(result)
 if __name__ == "__main__":
     sol = Solution()
     x = 2.00000
