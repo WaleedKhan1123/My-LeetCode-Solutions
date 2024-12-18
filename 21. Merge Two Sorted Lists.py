@@ -20,6 +20,9 @@ class Solution(object):
             mergelist.append(ListNode(sortlist[l]))
         for l in range(len(mergelist)-1):
             mergelist[l].next = mergelist[l+1]
+        print("List is =>")
+        for l in range(len(mergelist)):
+            print(f"{mergelist[l].val} =>")
             
 if __name__ == "__main__":
     sol = Solution()
