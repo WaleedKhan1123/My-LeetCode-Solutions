@@ -10,7 +10,13 @@ class Solution(object):
         :type list2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        l1 = ListNode
+        i=0
+        nodes = {}
+        for l in list1:
+            i=i+1
+            nodes[f"node{i}"] = ListNode(l)
+        
+
 if __name__ == "__main__":
     sol = Solution()
     list1 = [1,2,4]
