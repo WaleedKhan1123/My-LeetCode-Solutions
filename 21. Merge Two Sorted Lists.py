@@ -17,9 +17,10 @@ class Solution(object):
         print(sortlist) 
         mergelist = []
         for l in range(len(sortlist)-1):
-            node = ListNode(sortlist[l])
-            nextNode = ListNode(sortlist[l+1])
-            node.next =  
+            mergelist.append(ListNode(sortlist[l]))
+        for l in range(len(mergelist)-1):
+            mergelist[l].next = mergelist[l+1]
+            
 if __name__ == "__main__":
     sol = Solution()
     list1 = [1,2,4]
