@@ -14,12 +14,12 @@ class Solution(object):
         nodes = {}
         comlist = list1+list2
         sortlist = sorted(comlist)
-        print(sortlist)
-        for l in sortlist:
-            i=i+1
-            
-        
-        print(nodes[f"node{1}"].next)
+        print(sortlist) 
+        mergelist = []
+        for l in range(len(sortlist)-1):
+            node = ListNode(sortlist[l])
+            nextNode = ListNode(sortlist[l+1])
+            node.next =  
 if __name__ == "__main__":
     sol = Solution()
     list1 = [1,2,4]
