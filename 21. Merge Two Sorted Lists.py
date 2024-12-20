@@ -20,11 +20,11 @@ class Solution(object):
             mergelist.append(ListNode(sortlist[l]))
         for l in range(len(mergelist)-1):
             mergelist[l].next = mergelist[l+1]
-        print(f"List is => {mergelist[0].val}")
+        # print(f"List is => {mergelist[0].val}")
         c = 0
         while c < len(mergelist):
-            print(c)
-            print(f"{mergelist[c].next.val} =>",end="")
+            # print(c)
+            print(f"{mergelist[c].val} =>",end="")
             c+=1
             
 if __name__ == "__main__":
