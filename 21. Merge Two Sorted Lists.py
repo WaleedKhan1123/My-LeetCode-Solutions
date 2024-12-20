@@ -24,6 +24,7 @@ class Solution(object):
         for l in range(len(mergelist)):
             print(f"{mergelist[l].val} =>")
             
+            
 if __name__ == "__main__":
     sol = Solution()
     list1 = [1,2,4]
