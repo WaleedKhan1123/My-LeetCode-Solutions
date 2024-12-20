@@ -32,6 +32,7 @@ class Solution(object):
             
             c+=1
         print(c)
+        return sortlist
             
 if __name__ == "__main__":
 
