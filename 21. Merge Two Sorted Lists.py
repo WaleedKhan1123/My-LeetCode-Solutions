@@ -21,9 +21,10 @@ class Solution(object):
         for l in range(len(mergelist)-1):
             mergelist[l].next = mergelist[l+1]
         print("List is =>")
-        for l in range(len(mergelist)):
-            print(f"{mergelist[l].val} =>")
-            
+        c = 0
+        while c != len(mergelist):
+            print(f"{mergelist[c].next.val} =>")
+            c+=1
             
 if __name__ == "__main__":
     sol = Solution()
