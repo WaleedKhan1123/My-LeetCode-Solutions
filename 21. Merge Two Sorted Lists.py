@@ -10,28 +10,28 @@ class Solution(object):
         :type list2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        
-        comlist = []
-        while list1:
-            comlist.append(list1.val)
-            list1 = list1.next
-        while list2:
-            comlist.append(list2.val)
-            list2 = list2.next
+        # Dummy node to simplify merging
+        dummy = ListNode()
+        current = dummy
 
-        sortlist = sorted(comlist)  
-        mergelist = []
-        for val in sortlist:
-            mergelist.append(ListNode(val))  
-        for l in range(len(mergelist) - 1):
-            mergelist[l].next = mergelist[l + 1]
+        # Merge the two linked lists
+        while list1 and list2:
+            if list1.val < list2.val:
+                current.next = list1
+                list1 = list1.next
+            else:
+                current.next = list2
+                list2 = list2.next
+            current = current.next
 
-        
-        value = mergelist[0] if mergelist else None
+        # Attach remaining nodes from either list
+        if list1:
+            current.next = list1
+        if list2:
+            current.next = list2
 
-        return mergelist[0] if mergelist else None
-
-
+        # Return merged list starting at dummy.next
+        return dummy.next
 
 if __name__ == "__main__":
     
@@ -50,9 +50,4 @@ if __name__ == "__main__":
 
     
     result = sol.mergeTwoLists(list1, list2)
-
-    output = []
-    while result:
-        output.append(result.val)
-        result = result.next
-    print("Merged Linked List:", output)
+    print(result)
