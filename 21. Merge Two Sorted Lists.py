@@ -37,7 +37,19 @@ class Solution(object):
 if __name__ == "__main__":
 
     sol = Solution()
-    list1 = [1,2,4]
-    list2 = [1,3,4]
-    result = sol.mergeTwoLists(list1,list2)
-    print(result)
+    def create_linked_list(values):
+        dummy = ListNode()
+        current = dummy
+        for val in values:
+            current.next = ListNode(val)
+            current = current.next
+        return dummy.next
+
+    sol = Solution()
+    # Input linked lists
+    list1 = create_linked_list([1, 2, 4])
+    list2 = create_linked_list([1, 3, 4])
+    print(list1.val)
+
+    # # result = sol.mergeTwoLists(list1,list2)
+    # print(result)
