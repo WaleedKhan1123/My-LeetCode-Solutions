@@ -10,11 +10,11 @@ class Solution(object):
         :type list2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        # Dummy node to simplify merging
+     
         dummy = ListNode()
         current = dummy
 
-        # Merge the two linked lists
+        
         while list1 and list2:
             if list1.val < list2.val:
                 current.next = list1
@@ -24,13 +24,13 @@ class Solution(object):
                 list2 = list2.next
             current = current.next
 
-        # Attach remaining nodes from either list
+       
         if list1:
             current.next = list1
         if list2:
             current.next = list2
 
-        # Return merged list starting at dummy.next
+      
         return dummy.next
 
 if __name__ == "__main__":
@@ -48,6 +48,12 @@ if __name__ == "__main__":
     list1 = create_linked_list([1, 2, 4])
     list2 = create_linked_list([1, 3, 4])
 
-    
+    def linked_list_to_list(node):
+        result = []
+        while node:
+            result.append(node.val)
+            node = node.next
+        return result
     result = sol.mergeTwoLists(list1, list2)
-    print(result)
+    output = linked_list_to_list(result)
+    print("Merged Linked List:", output)
