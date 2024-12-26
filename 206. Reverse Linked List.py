@@ -3,6 +3,7 @@ class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
 class Solution(object):
     def reverseList(self, head):
         """
@@ -10,7 +11,7 @@ class Solution(object):
         :rtype: Optional[ListNode]
         """
 
-        
+
 if __name__ == "__main__":
    if __name__ == "__main__":
     
