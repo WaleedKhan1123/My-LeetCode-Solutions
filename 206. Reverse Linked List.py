@@ -9,6 +9,8 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
+
+        
 if __name__ == "__main__":
    if __name__ == "__main__":
     
@@ -23,7 +25,7 @@ if __name__ == "__main__":
     sol = Solution()
    
     head = [1,2,3,4,5]
-
+    
     def linked_list_to_list(node):
         result = []
         while node:
