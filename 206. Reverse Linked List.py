@@ -24,7 +24,6 @@ if __name__ == "__main__":
         return dummy.next
 
     sol = Solution()
-   
     head = [1,2,3,4,5]
     
     def linked_list_to_list(node):
