@@ -8,8 +8,18 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-
-        print(f"head is {head.next.val}")
+        if not head or not head.next:
+            return head
+        
+        prev = None
+        current = head
+        
+        while current:
+            next_node = current.next  
+            current.next = prev  
+            prev = current  
+            current = next_node  
+        return prev
 
 if __name__ == "__main__":
     
