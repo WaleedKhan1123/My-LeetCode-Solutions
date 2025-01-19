@@ -15,6 +15,7 @@ class Solution(object):
 
         Number_String1 = ''
         Number_String2 = ''
+        
         while l1:
             Number_String1 += str(l1.val) 
             l1 = l1.next
@@ -34,6 +35,7 @@ class Solution(object):
         numlist = list(reversed(numlist))
         dummy = ListNode()
         current = dummy
+
         for l in numlist:
             current.next = ListNode(l)
             current =  current.next
