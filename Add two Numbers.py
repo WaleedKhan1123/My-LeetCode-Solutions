@@ -24,17 +24,17 @@ if __name__ == "__main__":
     l2 = [5,6,4]
     
     def createLinkedList(list):
-        ind = 0
         dummy = ListNode()
         current = dummy
-        while current!=None:
-          
-            current.val = list[ind]
-            current = current.next
-            ind+=1
+        for l in list:
+
+            current.next = ListNode(l)
+            current =  current.next
         return dummy.next
             
-    dummy = createLinkedList(l1)
-    print(dummy)
+    l1 = createLinkedList(l1)
+    l2 = createLinkedList(l2)
+    print(l1.val)
+    print(l2.val)
     result = sol.addTwoNumbers(l1,l2)
 
