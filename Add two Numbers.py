@@ -12,36 +12,40 @@ class Solution(object):
         :type l2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        carry = 0 
-        number = {
 
-            '1':1,
-            '2':2,
-            '3':3,
-            '4':4,
-            '5':5,
-            '6':6,
-            '7':7,
-            '8':8,
-            '9':9,
-            '0':0
-        }
         Number_String1 = ''
         Number_String2 = ''
         while l1:
             Number_String1 += str(l1.val) 
             l1 = l1.next
-        print(f"string is {Number_String1}")
-             
+        Number_String1 = ''.join(reversed(Number_String1)) 
+        
+        while l2:
+            Number_String2+=str(l2.val)
+            l2 = l2.next
 
+        Number_String2 = ''.join(reversed(Number_String2)) 
+        num = int(Number_String1)+int(Number_String2)
+        num = str(num)
+        numlist = []
+        
+        for n in num:
+            numlist.append(int(n))
+        numlist = list(reversed(numlist))
+        dummy = ListNode()
+        current = dummy
+        for l in numlist:
+            current.next = ListNode(l)
+            current =  current.next
+        return dummy.next
 
 if __name__ == "__main__":
 
     sol = Solution()
     
-    l1 = [2,4,3]
+    l1 = [2,4,9]
     
-    l2 = [5,6,4]
+    l2 = [5,6,4,9]
     
     def createLinkedList(list):
         dummy = ListNode()
@@ -56,3 +60,8 @@ if __name__ == "__main__":
     l2 = createLinkedList(l2)
     result = sol.addTwoNumbers(l1,l2)
 
+    while result:
+        print(result.val)
+        result = result.next
+
+    
