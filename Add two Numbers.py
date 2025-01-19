@@ -12,7 +12,11 @@ class Solution(object):
         :type l2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        print(f"l1 is {l1} l2 is {l2}")    
+        carry =0 
+
+        while l1:
+            l1 = l1.next
+             
 
 
 if __name__ == "__main__":
@@ -34,7 +38,5 @@ if __name__ == "__main__":
             
     l1 = createLinkedList(l1)
     l2 = createLinkedList(l2)
-    print(l1.val)
-    print(l2.val)
     result = sol.addTwoNumbers(l1,l2)
 
