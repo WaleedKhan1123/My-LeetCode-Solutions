@@ -12,10 +12,26 @@ class Solution(object):
         :type l2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        carry =0 
+        carry = 0 
+        number = {
 
+            '1':1,
+            '2':2,
+            '3':3,
+            '4':4,
+            '5':5,
+            '6':6,
+            '7':7,
+            '8':8,
+            '9':9,
+            '0':0
+        }
+        Number_String1 = ''
+        Number_String2 = ''
         while l1:
+            Number_String1 += str(l1.val) 
             l1 = l1.next
+        print(f"string is {Number_String1}")
              
 
 
