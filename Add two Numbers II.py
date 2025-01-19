@@ -18,21 +18,19 @@ class Solution(object):
         
         while l1:
             Number_String1 += str(l1.val) 
-            l1 = l1.next
-        Number_String1 = ''.join(reversed(Number_String1)) 
+            l1 = l1.next 
         
         while l2:
             Number_String2+=str(l2.val)
             l2 = l2.next
-
-        Number_String2 = ''.join(reversed(Number_String2)) 
+ 
         num = int(Number_String1)+int(Number_String2)
         num = str(num)
         numlist = []
         
         for n in num:
             numlist.append(int(n))
-        numlist = list(reversed(numlist))
+    
         dummy = ListNode()
         current = dummy
 
@@ -45,9 +43,8 @@ if __name__ == "__main__":
 
     sol = Solution()
     
-    l1 = [2,4,9]
-    
-    l2 = [5,6,4,9]
+    l1 = [7,2,4,3]
+    l2 = [5,6,4]
     
     def createLinkedList(list):
         dummy = ListNode()
