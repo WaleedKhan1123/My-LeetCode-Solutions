@@ -8,6 +8,11 @@ class Solution(object):
         """
         print(nums)
         print(val)
+        count = nums.count(val)
+        print(count)
+        indexCount =  [i for i,num in enumerate(nums) if num == val]
+        print(indexCount)
+
         
 if __name__ == "__main__":
     sol = Solution()
