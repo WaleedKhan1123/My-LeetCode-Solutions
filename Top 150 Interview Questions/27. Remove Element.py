@@ -8,6 +8,7 @@ class Solution(object):
         """
         print(nums)
         print(val)
+        
 if __name__ == "__main__":
     sol = Solution()
     nums = [3,2,2,3]
