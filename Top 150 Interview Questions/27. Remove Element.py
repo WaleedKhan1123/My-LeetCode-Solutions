@@ -1,4 +1,3 @@
-#not done yet
 class Solution(object):
     def removeElement(self, nums, val):
         """
@@ -6,20 +5,13 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
-        print(nums)
-        print(val)
-        count = nums.count(val)
-        print(count)
-        indexCount =  [i for i,num in enumerate(nums) if num == val]
-        print(indexCount)
-        i = 0
-        while len(indexCount)>0:
-             
-             nums.pop(indexCount[i])
-             indexCount = [i for i,num in enumerate(nums) if num == val]
-             i-=1
-        print(nums)
-        
+        i = 0  
+        for j in range(len(nums)):
+            if nums[j] != val:
+                nums[i] = nums[j]  
+                i += 1  
+        return i  
+
 if __name__ == "__main__":
     sol = Solution()
     nums = [3,2,2,3]
