@@ -4,16 +4,21 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        print(nums)
-        duplicate = set()
-        for i in range(len(nums)-1):
-            if nums[i] == nums[i+1]:
-                duplicate.add(nums[i])
-        print(duplicate)
+        if not nums:
+            return 0
+        
+        unique_index = 0  
+        
+        for i in range(1, len(nums)):
+            if nums[i] != nums[unique_index]:  
+                unique_index += 1
+                nums[unique_index] = nums[i]  
         
         
+        return unique_index + 1  
+
 if __name__ == "__main__":
     sol = Solution()
-    nums = [1,1,2,2,3,4,4,4]
-    val = 3
-    sol.removeDuplicates(nums)
+    nums = [1, 1, 2, 2, 3, 4, 4, 4]
+    new_length = sol.removeDuplicates(nums)
+    print(nums[:new_length])  
