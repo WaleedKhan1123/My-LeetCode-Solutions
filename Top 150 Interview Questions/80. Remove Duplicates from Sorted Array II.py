@@ -4,7 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        for i in range(len(nums)):
+        if not nums:
+            return 0
+        
+                
+                
             
 if __name__ == "__main__":
     sol = Solution()
