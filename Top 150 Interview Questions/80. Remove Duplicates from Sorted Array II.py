@@ -9,16 +9,20 @@ class Solution(object):
          return 0
         
         i=0      
+        counter = 0
         while i <len(nums):
-           print(i)
            if nums[i]==nums[i]+1:
               if nums[i] == nums[i]+2:
                 for j in range(i,len(nums)-1):
                    nums[j],nums[j+1] = nums[j+1],nums[j]
                 i+=3
+                counter+=1
+              else:
+                i+2
            
            else:
               i=i+1
+        return len(nums)-counter
 
             
 if __name__ == "__main__":
