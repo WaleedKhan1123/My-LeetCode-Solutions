@@ -10,26 +10,24 @@ class Solution(object):
         
         i=0      
         counter = 0
-        while i <len(nums):
+        while i <len(nums)-1:
            if nums[i]==nums[i+1]:
+              print(nums[i])
               if nums[i] == nums[i+2]:
-                print("working")
                 for j in range(i,len(nums)-1):
                    nums[j],nums[j+1] = nums[j+1],nums[j]
                 i+=3
                 counter+=1
               else:
-                print("working")
-                i+2
+                i+=2
            
            else:
-              print("working")
               i=i+1
         return len(nums)-counter
 
             
 if __name__ == "__main__":
     sol = Solution()
-    nums = [1,1,1,2,2,3]
+    nums = [0,0,1,1,1,1,2,3,3]
     new_length = sol.removeDuplicates(nums)
     print(nums[:new_length])  
