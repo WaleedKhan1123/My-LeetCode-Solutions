@@ -9,9 +9,17 @@ class Solution(object):
          return 0
         
         i=0      
-        while i <10:
+        while i <len(nums):
            print(i)
-           i=i+2
+           if nums[i]==nums[i]+1:
+              if nums[i] == nums[i]+2:
+                for j in range(i,len(nums)-1):
+                   nums[j],nums[j+1] = nums[j+1],nums[j]
+                i+=3
+           
+           else:
+              i=i+1
+
             
 if __name__ == "__main__":
     sol = Solution()
