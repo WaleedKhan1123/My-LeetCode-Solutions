@@ -1,3 +1,4 @@
+#not completed yet
 class Solution(object):
     def removeDuplicates(self, nums):
         """
@@ -5,7 +6,7 @@ class Solution(object):
         :rtype: int
         """
         if not nums:
-            return 0
+         return 0
         
                 
                 
