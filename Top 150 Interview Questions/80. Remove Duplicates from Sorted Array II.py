@@ -1,4 +1,3 @@
-#not completed yet
 class Solution(object):
     def removeDuplicates(self, nums):
         """
@@ -6,24 +5,15 @@ class Solution(object):
         :rtype: int
         """
         if not nums:
-         return 0
+            return 0
         
-        i=0      
-        counter = 0
-        while i <len(nums)-1:
-           if nums[i]==nums[i+1]:
-              print(nums[i])
-              if nums[i] == nums[i+2]:
-                for j in range(i,len(nums)-1):
-                   nums[j],nums[j+1] = nums[j+1],nums[j]
-                i+=3
-                counter+=1
-              else:
-                i+=2
-           
-           else:
-              i=i+1
-        return len(nums)-counter
+        write_index = 0
+        for i in range(len(nums)):
+            if write_index < 2 or nums[i] != nums[write_index - 2]:
+                nums[write_index] = nums[i]
+                write_index += 1
+        
+        return write_index
 
             
 if __name__ == "__main__":
