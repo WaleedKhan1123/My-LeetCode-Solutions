@@ -5,14 +5,18 @@ class Solution(object):
         :rtype: int
         """
         n = len(nums)/2
+        print(n)
         counter = 0
         current_frequent = None
         for i in nums:
-            for j in nums:
-                if j == i:
-                  counter+=1
-                if counter>n:
-                    current_frequent = j
+            if i != current_frequent:
+                print(i)
+                for j in nums:
+                    if j == i:
+                       counter+=1
+                    if counter>n:
+                        current_frequent = j
+            counter=0
         return current_frequent
             
              
@@ -22,6 +26,6 @@ class Solution(object):
         
 if __name__ == "__main__":
     sol = Solution()
-    nums = [2,2,1,1,1,2,2]
+    nums = [3,3,4]
     result = sol.majorityElement(nums)
     print(result)
